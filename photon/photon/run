@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ $1 == "train" ]; then
+    python machine_learning/train.py train
+elif [ $1 == "case" ]; then
+	python machine_learning/classify.py /home/janelle/Desktop/photon/photon/bin/tim-2.jpg 4749
+elif [ $1 == "image" ]; then
+	python machine_learning/classify.py $2 $3
+elif [ $1 == "test" ]; then
+	#python machine_learning/train.py train
+	nosetests -w test/
+fi
