@@ -1,0 +1,329 @@
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <title>summaly</title>
+        <style type="text/css">
+            body
+            {
+                padding-bottom: 30px;
+                background: #f0f0f0;
+                margin: 0;
+                min-width: 800px;
+            }
+        
+            body, td, div
+            {
+                line-height: 1.6em;
+            }
+
+            ::-webkit-input-placeholder
+            {
+                color: #888;
+                font-weight: 300;
+                font-family: "HelveticaNeue-Light", "Helvetica";
+            }
+
+            input
+            {
+                outline:none;
+            }
+
+            :-moz-placeholder
+            {
+                color: #888;
+                font-weight: 300;
+                font-family: "HelveticaNeue-Light", "Helvetica";
+            }
+
+            ::-moz-placeholder
+            {
+                color: #888;
+                font-weight: 300;
+                font-family: "HelveticaNeue-Light", "Helvetica";
+            }
+
+            :-ms-input-placeholder
+            {
+                color: #888;
+                font-weight: 300;
+                font-family: "HelveticaNeue-Light", "Helvetica";
+            }
+        
+            #header
+            {
+                box-shadow: 1px 1px 1px #ddd;
+                min-width: 700px;
+                font-size: 20px;
+                background: #f9f9f9;
+                font-family: "HelveticaNeue-UltraLight", "Helvetica";
+                color: black;
+                text-align: left;
+                font-weight: 100;
+            }
+        
+            #logo
+            {
+                text-align: center;
+                background: #34b81e;
+                width: 200px;
+                float: left;
+                font-family: "HelveticaNeue-Thin", "Helvetica";
+                font-weight: 300;
+                padding-top: 13px;
+                height: 47px;
+                color: white;
+            }
+        
+            #header_input
+            {
+                border: none;
+                font-family: "HelveticaNeue-UltraLight", "Helvetica";
+                width: 500px;
+                text-align: left;
+                height: 60px;
+                color: black;
+                background: #f9f9f9;
+                padding-left: 25px;
+                border-left: 1px solid #efefef;
+                color: black;
+                font-size: 15px;
+            }
+        
+            #content
+            {
+                padding-left: 50px;
+                padding-right: 50px;
+                text-align: center;
+                margin-top: 50px;
+                max-width: 1000px;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        
+            #video_column
+            {
+                width: 70%;
+                vertical-align: top;
+                padding-right: 15px;
+            }
+        
+            #video_table
+            {
+                width: 100%;
+            }
+        
+            #video
+            {
+                min-height: 300px;
+            }
+        
+            #notes_column
+            {
+                vertical-align: top;
+                font-family: "HelveticaNeue-Thin", "Helvetica";
+            }
+        
+            #notes_content
+            {
+                background: #fafafa;
+                height: 281px;
+                padding-bottom: 20px;
+                overflow: auto;
+            }
+        
+            .note
+            {
+                border-bottom: 1px solid #aaa;
+                color: #666;
+                padding-left: 40px;
+                padding-right: 40px;
+                padding-top: 15px;
+                font-size: 14px;
+            }
+        
+            .note_title
+            {
+                font-family: "HelveticaNeue-Light", "Helvetica";
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+        
+            #notes_content a
+            {
+                font-size: 14px;
+                color: #3686be;
+                text-decoration: none;
+            }
+        
+            .note_time
+            {
+                font-family: "HelveticaNeue-Light", "Helvetica";
+                font-weight: 100;
+                margin-bottom: 20px;
+                color: black;
+                text-align: right;
+            }
+        
+            #notes_content img
+            {
+                margin-bottom: 7px;
+                height: 100px;
+            }
+        
+            .padding
+            {
+                height: 40px;
+            }
+        
+            .bottom_text_block
+            {
+                font-family: "HelveticaNeue-Thin", "Helvetica";
+                font-weight: 100;
+                text-align: left;
+                margin-bottom: 30px;
+            }
+        
+            .bottom_text_block .title
+            {
+                font-weight: 100;
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script type="text/javascript">
+            function updateDimensions()
+            {
+                $("#player").height($("#player").width() * 9 / 16);
+                $("#notes_content").height($("#player").height() - 19);
+            }
+        
+            function resize()
+            {
+                updateDimensions();
+            }
+        
+            function load()
+            {
+                updateDimensions();
+            }
+        
+            function keyDown(event)
+            {
+                if(event.keyCode==13)
+                {
+                    s = $("#header_input").val().indexOf("v=");
+                    document.location.href = "/summarize/" + $("#header_input").val().substr(s + 2);
+                }
+            }
+        
+            $(document).ready(updateDimensions);
+        </script>
+    </head>
+    <body onresize="resize()" onload="load()">
+        <div id="header">
+            <div id="logo">
+                summaly
+            </div>
+            <input onkeydown="keyDown(event)" id="header_input" placeholder="Enter Youtube URL"/>
+        </div>
+        <div id="content">
+            <table id="video_table">
+                <tr>
+                    <td id="video_column">
+                        <div id="player"></div>
+                    </td>
+                    <td id="notes_column">
+                        <div id="notes_content">
+                            {% for word, link, summary, pic, time_sec in links %}
+                                <div class="note" id = "{{word}}" style="display:none">
+                                    <div class="note_title">
+                                        {{word}}
+                                    </div>
+                                    <img src="{{pic}}"/><br/>
+                                    {{summary}}<br/>
+                                    <a href="{{link}}">
+                                        find information
+                                    </a>
+                                    <br/><br/>
+                                    <div class="note_time">
+                                        {{time_sec}}s
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="padding"></div>
+            <div class="bottom_text_block">
+                <div class="title">
+                    key points
+                </div>
+                {{summary}}
+            </div>
+        </div>
+        <script>
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            var player;
+            function onYouTubeIframeAPIReady()
+            {
+                player = new YT.Player('player',
+                {
+                    height: '390',
+                    width: '100%',
+                    videoId: '{{url_id}}',
+                    events:
+                    {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+        
+            function onPlayerReady(event)
+            {
+                window.setInterval(function()
+                {
+                    k = parseInt(player.getCurrentTime());
+                    {% for stop_time, start_time in time_list %}
+                    if (k == {{stop_time}} && {{start_time}} != {{stop_time}})
+                    {
+                        if ({{start_time}} != -99)
+                        {
+                            player.seekTo({{start_time}}, true);
+                        }
+                        else
+                        {
+                            player.seekTo(player.getDuration(), true);
+                        }
+                    }
+                    {% endfor %}
+                    {% for word, link, summary, pic, time_sec in links %}
+                    if (k == {{time_sec}})
+                    {
+                        document.getElementById("{{word}}").style.display="block";
+                    }
+                    {% endfor %}
+                }, 1000);
+            }
+        
+            var done = false;
+            function onPlayerStateChange(event)
+            {
+                if (event.data == YT.PlayerState.PLAYING && !done)
+                {
+                }
+            }
+        
+            function stopVideo()
+            {
+                player.stopVideo();
+            }
+    </script>
+    </body>
+</html>

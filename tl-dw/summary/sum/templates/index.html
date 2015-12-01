@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>summaly</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <style type="text/css">
+            body
+            {
+                line-height: 1.6em;
+                min-height: 600px;
+                background-position: top;
+                min-width: 800px;
+                margin: 0;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-image: url('http://smartfuse.net/summaly/blurred_background.jpg');
+                height: 100%;
+                width: 100%
+            }
+
+            #header
+            {
+                padding-top: 15%;
+                text-align: center;
+                font-family: "HelveticaNeue-Thin", "Helvetica";
+                color: #fff;
+                font-size: 30px;
+            }
+        
+            ::-webkit-input-placeholder
+            {
+                color: #bbb;
+                font-weight: 300;
+                font-family: "HelveticaNeue", "Helvetica";
+            }
+
+            :-moz-placeholder
+            {
+                color: #bbb;
+                font-weight: 300;
+                font-family: "HelveticaNeue", "Helvetica";
+            }
+
+            ::-moz-placeholder
+            {
+                color: #bbb;
+                font-weight: 300;
+                font-family: "HelveticaNeue", "Helvetica";
+            }
+
+            :-ms-input-placeholder
+            {
+                color: #bbb;
+                font-weight: 300;
+                font-family: "HelveticaNeue", "Helvetica";
+            }
+        
+            #header input
+            {
+                margin-top: 50px;
+                border: none;
+                font-family: "HelveticaNeue-UltraLight", "Helvetica";
+                width: 500px;
+                text-align: left;
+                height: 60px;
+                color: black;
+                background: #fff;
+                padding-left: 25px;
+                color: black;
+                border: 1px solid #aaa;
+                font-size: 15px;
+            }
+        
+            input
+            {
+                outline: none;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function keyDown(event)
+            {
+                if(event.keyCode==13)
+                {
+                    s = $("#main-input").val().indexOf("v=");
+                    document.location.href = "/summarize/" + $("#main-input").val().substr(s + 2);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            summaly<br/>
+            <input  onkeydown="keyDown(event)" id="main-input" placeholder="Enter Youtube URL" type="text"/>
+        </div>
+    </body>
+</html>
