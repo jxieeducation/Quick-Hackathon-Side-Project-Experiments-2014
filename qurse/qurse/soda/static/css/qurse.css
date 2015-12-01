@@ -1,0 +1,239 @@
+html, body
+{
+    height: 100%;
+    background-color: #c04242
+}
+
+.navbar
+{
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 0
+}
+
+.navbar .navbar-brand, .navbar .navbar-nav > li > a
+{
+    font-weight: 500;
+    color: #c04242
+}
+
+.navbar-brand
+{
+    font-size: 22px;
+}
+
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:hover
+{
+    color: #463265;
+    background-color: #f9f9f9
+}
+
+.navbar .navbar-toggle .icon-bar
+{
+    background-color: #c04242
+}
+
+.navbar .navbar-header .navbar-toggle
+{
+    border-color: #fff
+}
+
+.navbar .navbar-header .navbar-toggle:hover,.navbar .navbar-header .navbar-toggle:focus
+{
+    background-color :#f9f9f9;
+    border-color: #f9f9f9
+}
+
+.main-content
+{
+    padding: 30px 15px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-40%);
+}
+
+.form-content
+{
+    margin: 30px 15px;
+    color: #555;
+}
+
+form
+{
+    color: white;
+}
+
+form label
+{
+    font-weight: 300;
+    font-size: 16px;
+    color: #FFF;
+    display: none;
+}
+
+form .form-control
+{
+    color: #FFF;
+    background: transparent !important;
+    border: none;
+    padding: 0px;
+    font-size: 18px;
+    border-bottom: 1px dotted white;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+form .form-control:focus
+{
+    outline: none;
+}
+
+.form-control::-webkit-input-placeholder
+{ 
+    color: #FFF;
+    font-weight: 300;
+}
+
+form .form-group
+{
+    margin-bottom: 30px;
+}
+
+.main-content .main-content-icon
+{
+    margin:0 auto 30px
+}
+
+.main-content h1
+{
+    font-weight: 300;
+    line-height: 1;
+    font-size: 18px;
+    color: #fff
+}
+
+.main-content .lead
+{
+    margin: 0 auto 30px;
+    color: #fff
+}
+
+.main-content .version
+{
+    margin-top: -15px;
+    margin-bottom: 30px;
+    color: white
+}
+
+.main-content .btn
+{
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 20px
+}
+
+@media (min-width: 480px)
+{
+    .main-content .btn
+    {
+        width: auto
+    }
+}
+
+@media (min-width:768px)
+{
+    .main-content
+    {
+        padding:80px 0
+    }
+    
+    .main-content h1
+    {
+        font-size:60px
+    }
+    
+    .main-content .lead
+    {
+        font-size:22px
+    }
+}
+
+@media (min-width:992px)
+{
+    .main-content .lead
+    {
+        width:80%;
+        font-size:24px
+    }
+}
+
+.main-content-icon
+{
+    display: block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    cursor: default;
+    background-color: #c04242;
+    border-radius: 50%
+}
+
+.main-content-icon-lg
+{
+    width:80px;
+    height:80px;
+    font-size:50px;
+    line-height:80px
+}
+
+.main-content-icon-outline
+{
+    background-color: transparent;
+    border: 2px solid white
+}
+
+.btn-outline
+{
+    color: white;
+    background-color: transparent; 
+    border-color:white 
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active
+{
+    color:#fff;
+    background-color: white;
+    border-color:white
+}
+
+.btn-outline-inverse
+{
+    color: #fff;
+    background-color: transparent;
+    border-color: white
+}
+
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus, .btn-outline-inverse:active
+{
+    color: #c04242;
+    text-shadow: none;
+    background-color: #fff;
+    border-color: #fff
+}
+
+form .btn-outline-inverse
+{
+    font-size: 17px;
+    font-weight: 300;
+}
+
+form .btn-outline-inverse:hover
+{
+    background-color: white;
+    color: #c04242;
+}
