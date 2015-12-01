@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Eyeleo
+_Comment=Eyeleo application
+Categories=GNOME;Utility;
+Exec=eyeleo
+Icon=/usr/share/eyeleo/media/eyeleo.png
+Terminal=false
+Type=Application

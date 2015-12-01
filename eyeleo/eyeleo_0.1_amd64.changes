@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Mon, 19 May 2014 19:17:27 -0700
+Source: eyeleo
+Binary: eyeleo
+Architecture: source all
+Version: 0.1
+Distribution: precise
+Urgency: low
+Maintainer: UNKNOWN <UNKNOWN>
+Changed-By: janelle <janelle@localhost>
+Description: 
+ eyeleo     - UNKNOWN
+Changes: 
+ eyeleo (0.1) precise; urgency=low
+ .
+   * Initial release.
+Checksums-Sha1: 
+ ecbf9e6cd7b1388a748e5b3e7478da667136fe21 514 eyeleo_0.1.dsc
+ c2e3166db479849fc55002fce1ad3b8792c53341 35008 eyeleo_0.1.tar.gz
+ 610d815e85c043e0658f80843d188087fa78a7b3 35894 eyeleo_0.1_all.deb
+Checksums-Sha256: 
+ 135a2980d0820221108967bb671e49b7c91c5c441bd36d8c02be168c0f8ae891 514 eyeleo_0.1.dsc
+ c4efffd4f7e5d3e39425d99c14ff69b4f9e6be22a972fd429ef924c88044798d 35008 eyeleo_0.1.tar.gz
+ f4abb26ed043888a452c4267cc7a206766e48031171ad2831af6aa6111b43117 35894 eyeleo_0.1_all.deb
+Files: 
+ 81a6cba745f29694ffec942abccba2c0 514 python extra eyeleo_0.1.dsc
+ 669bcc931c87c34f6b7dc837a6b273e9 35008 python extra eyeleo_0.1.tar.gz
+ 9faedee69b2bc45e2ded25879585aeff 35894 python extra eyeleo_0.1_all.deb
