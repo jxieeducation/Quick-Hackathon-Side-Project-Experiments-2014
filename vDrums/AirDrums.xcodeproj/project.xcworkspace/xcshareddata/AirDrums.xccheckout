@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3EF306C2-2E87-4BB0-AECE-BC8BE3199208</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AirDrums</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E7BEA345-04F0-4BCC-9C50-DA9FB3A8F754</key>
+		<string>https://github.com/ronaldmannak/AirDrums.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AirDrums.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E7BEA345-04F0-4BCC-9C50-DA9FB3A8F754</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ronaldmannak/AirDrums.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E7BEA345-04F0-4BCC-9C50-DA9FB3A8F754</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E7BEA345-04F0-4BCC-9C50-DA9FB3A8F754</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AirDrums</string>
+		</dict>
+	</array>
+</dict>
+</plist>

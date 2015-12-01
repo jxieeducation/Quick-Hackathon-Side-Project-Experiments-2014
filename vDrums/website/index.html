@@ -1,0 +1,162 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Airdrums</title>
+<link rel="stylesheet" href="http://cloud.typography.com/6912452/754204/css/fonts.css">
+<link rel="stylesheet" href="http://dribbbox.com/style.css">
+
+<style>
+    #use li::before
+    {
+        background: white !important;
+    }
+
+    h1::before
+    {
+        background-image: none !important;
+    }
+
+    #faq
+    {
+        text-shadow: none !important;
+        font-family: 'Helvetica' !important;
+        font-weight: 300;
+    }
+
+    #faq h1
+    {
+        font-size: 18px !important;
+    }
+
+    #faq li::before
+    {
+        height: 0px !important;
+    }
+</style>
+
+<header>
+    <canvas style="background: url(http://www.hdwallpapers.in/walls/ios_7_galaxy-wide.jpg); background-size: 100% 100%;"></canvas>
+    <h1>Let's Play Drums</h1>
+    <p>
+        <strong>Air drum with two special sticks<br>And your iPad will provide the sound</strong>
+    </p>
+    <ul>
+    	<b><a href = "bon.html">Demo</a></b>
+    </ul>
+</header>
+
+<section id="use">
+    <h1>Get Started</h1><br/><br/>
+    <ol>
+        <li><strong>Download</strong>Download the app
+        <li><strong>Pair</strong>Pair the Bluetooth sticks
+        <li><strong>Play</strong>Time to jam
+    </ol>
+</section>
+
+<section id="faq">
+    <ul>
+        <li>
+            <h1>Hardware</h1>
+                <p>Each stick has a Bluetooth accelerometer that detects when you hit in midair. The accelerometer is wireless and battery powered. Simply pair the sticks to the iPad.</p>
+        <li>
+            <h1>Software</h1>
+                <p>The iPad receives data from the sticks and plays the appropriate sound sample. The iPad also detects bass drum stomps via the microphone and emulates the bass drum.</p>
+        <li>
+            <h1>Useful</h1>
+                <p>Traditional drumsets are loud and expensive and electric drumsets take up space. You can use Airdrums with headphones and also with little physical space.</p>
+        <li>
+            <h1>Cost Efficient</h1>
+                <p>No more buying new drum heads or accesories. Drum sounds are easily customizable so you can have multiple kits. Airdrum's hardware is also inexpensive.</p>
+    </ul>
+</section>
+
+<footer style="font-family: Helvetica">
+    <p style="font-family: Helvetica"><strong>Airdrums</strong>. Drums made easy, releasing soon.</p>
+    <a href="http://twitter.com/ronaldmannak">Follow</a>
+</footer>
+
+<script>
+    var site = {};
+    
+    (function() {
+     var transform = "transform" in document.body.style ? "transform" : "-webkit-transform",
+     
+     header = {
+     el: document.querySelector("header"),
+     rows: 3,
+     cols: 6
+     },
+     
+     canvas = header.el.querySelector("canvas"),
+     
+     playIntro = function() {
+     var title = header.el.querySelector("h1"),
+     letters = title.textContent.split(""),
+     spans = document.createDocumentFragment()
+     
+     if ("animation" in document.body.style)
+     var animationdelay = "animation-delay", animationend = "animationend"
+     else
+     var animationdelay = "-webkit-animation-delay", animationend = "webkitAnimationEnd"
+     
+     letters.forEach(function(letter, i) {
+                     var span = document.createElement("span")
+                     span.textContent = letter
+                     span.style.setProperty(animationdelay, 0.9 + (0.1 * i) + "s")
+                     if (i == letters.length-1) span.addEventListener(animationend, function() {
+                                                                      document.body.className = "intro-finished"
+                                                                      })
+                     spans.appendChild(span)
+                     })
+     
+     title.replaceChild(spans, title.firstChild)
+     title.className = "visible"
+     }
+     var retina = devicePixelRatio > 1,
+     shotSize = {
+     width: 300,
+     height: 225
+     },
+     totalWidth = shotSize.width * header.cols,
+     totalHeight = shotSize.height * header.rows,
+     loadedImages = []
+     
+     if (retina) {
+     canvas.width = totalWidth * 2
+     canvas.height = totalHeight * 2
+     canvas.style.width = totalWidth + "px"
+     canvas.style.height = totalHeight + "px"
+     }
+     else {
+     canvas.width = totalWidth
+     canvas.height = totalHeight
+     }
+     
+     canvas.style.marginLeft = -totalWidth / 2 + "px"
+     
+     if (retina) ctx.scale(2, 2)
+     
+     site.init = function() {
+     function handleVisibilityChange() {
+     if (document.visibilityState == "visible") {
+     playIntro()
+     document.removeEventListener("visibilitychange", handleVisibilityChange)
+     }
+     }
+     
+     if (document.visibilityState == "visible")
+     playIntro()
+     else
+     document.addEventListener("visibilitychange", handleVisibilityChange)
+     
+     if ("ontouchend" in document.documentElement) {
+     header.el.className = "touch-device"
+     header.el.removeChild(canvas)
+     document.body.addEventListener("touchend", function() {}) // enables :active support
+     }
+     }
+     })()
+     
+     
+     site.init()
+</script>

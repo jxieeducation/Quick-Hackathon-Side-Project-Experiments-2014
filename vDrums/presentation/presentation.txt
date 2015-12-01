@@ -1,0 +1,17 @@
+AirDrums - combining Echo Nest's magic with hardware wizardary   
+   
+We hacked together a virtual drum set that allows you to play drums to any song!   
+   
+Hardware:  sensors + rubber drumstick   
+  
+We used Arduino's control and Texas Instruments' sensors to obtain the accleration of drum stick and muscle movement. The drumsticks are able to detect more than 8! different locations, which translates to 8 distinct sounds, such as those of the snare, bass drum, hi-hat, cymbal, crash...etc.   
+
+Software: iPhone app + Echo Nest's magic to add percussion to every song!   
+   
+Our iPhone provides a visualization of the percussions. You can see exactly which instruments that you hit with almost instant (15ms delay) sound formation.  
+   
+We used Echo Nest's API to make the drumming experience BETTER than that of Guitar Hero. Echo Nest could analyze the song in which drum action is being added to. The analyzer provides a detailed map for the beat structure and timing for the song and the beats. In particular, the analyzer provides a detailed map of where each beat starts and stops, the loudness of the audio at each beat, and a measure of the confidence of the beat.   
+   
+In the past 24 hours, we added onto the Bonhamzier shown in the demo, by nullifying the drum sounds from songs which already have heavy drumming. In addition, we also incorporated this for multiple platforms.    
+   
+The result is a drumset that works like magic on your iPhone, which works with Echo Nest to allow you to drum to songs like Joey Jordison!!   

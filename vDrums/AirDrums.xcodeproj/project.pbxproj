@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C62D264C19282EE100B1051B /* ADRDebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62D264B19282EE100B1051B /* ADRDebugViewController.m */; };
+		C62D264F192831A600B1051B /* ADRStickDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = C62D264E192831A600B1051B /* ADRStickDebug.m */; };
+		E6086B8EC04640E0B1990761 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 903C3C5288254F5D941C9CFA /* libPods.a */; };
+		F8BFF1AC1927DECC00902F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BFF1AB1927DECC00902F6F /* Foundation.framework */; };
+		F8BFF1AE1927DECC00902F6F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BFF1AD1927DECC00902F6F /* CoreGraphics.framework */; };
+		F8BFF1B01927DECC00902F6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BFF1AF1927DECC00902F6F /* UIKit.framework */; };
+		F8BFF1B21927DECC00902F6F /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BFF1B11927DECC00902F6F /* SpriteKit.framework */; };
+		F8BFF1B81927DECC00902F6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF1B61927DECC00902F6F /* InfoPlist.strings */; };
+		F8BFF1BA1927DECC00902F6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1B91927DECC00902F6F /* main.m */; };
+		F8BFF1BE1927DECC00902F6F /* ADRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1BD1927DECC00902F6F /* ADRAppDelegate.m */; };
+		F8BFF1C11927DECC00902F6F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF1BF1927DECC00902F6F /* Main_iPhone.storyboard */; };
+		F8BFF1C41927DECC00902F6F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF1C21927DECC00902F6F /* Main_iPad.storyboard */; };
+		F8BFF1C71927DECC00902F6F /* ADRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1C61927DECC00902F6F /* ADRViewController.m */; };
+		F8BFF1CA1927DECC00902F6F /* ADRMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1C91927DECC00902F6F /* ADRMyScene.m */; };
+		F8BFF1CC1927DECC00902F6F /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF1CB1927DECC00902F6F /* Spaceship.png */; };
+		F8BFF1CE1927DECC00902F6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF1CD1927DECC00902F6F /* Images.xcassets */; };
+		F8BFF1D51927DECC00902F6F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BFF1D41927DECC00902F6F /* XCTest.framework */; };
+		F8BFF1D61927DECC00902F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BFF1AB1927DECC00902F6F /* Foundation.framework */; };
+		F8BFF1D71927DECC00902F6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BFF1AF1927DECC00902F6F /* UIKit.framework */; };
+		F8BFF1DF1927DECC00902F6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF1DD1927DECC00902F6F /* InfoPlist.strings */; };
+		F8BFF1E11927DECC00902F6F /* AirDrumsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1E01927DECC00902F6F /* AirDrumsTests.m */; };
+		F8BFF1EB1927E2F500902F6F /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF1EA1927E2F500902F6F /* Notes */; };
+		F8BFF2031927E6B200902F6F /* DEASensorTag.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1EE1927E6B200902F6F /* DEASensorTag.m */; };
+		F8BFF2041927E6B200902F6F /* DEAAccelerometerService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1F11927E6B200902F6F /* DEAAccelerometerService.m */; };
+		F8BFF2051927E6B200902F6F /* DEABarometerService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1F31927E6B200902F6F /* DEABarometerService.m */; };
+		F8BFF2061927E6B200902F6F /* DEABaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1F51927E6B200902F6F /* DEABaseService.m */; };
+		F8BFF2071927E6B200902F6F /* DEADeviceInfoService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1F71927E6B200902F6F /* DEADeviceInfoService.m */; };
+		F8BFF2081927E6B200902F6F /* DEAGyroscopeService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1F91927E6B200902F6F /* DEAGyroscopeService.m */; };
+		F8BFF2091927E6B200902F6F /* DEAHumidityService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1FB1927E6B200902F6F /* DEAHumidityService.m */; };
+		F8BFF20A1927E6B200902F6F /* DEAMagnetometerService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1FD1927E6B200902F6F /* DEAMagnetometerService.m */; };
+		F8BFF20B1927E6B200902F6F /* DEASimpleKeysService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF1FF1927E6B200902F6F /* DEASimpleKeysService.m */; };
+		F8BFF20C1927E6B200902F6F /* DEATemperatureService.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF2011927E6B200902F6F /* DEATemperatureService.m */; };
+		F8BFF28C19281B8500902F6F /* BBYAccelerometerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF28319281B8500902F6F /* BBYAccelerometerFilter.m */; };
+		F8BFF28D19281B8500902F6F /* BBYCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF28519281B8500902F6F /* BBYCentralManager.m */; };
+		F8BFF28E19281B8500902F6F /* BBYDrumkit.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF28719281B8500902F6F /* BBYDrumkit.m */; };
+		F8BFF28F19281B8500902F6F /* BBYDrumkitSounds.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF28919281B8500902F6F /* BBYDrumkitSounds.m */; };
+		F8BFF29019281B8500902F6F /* BBYPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF28B19281B8500902F6F /* BBYPeripheral.m */; };
+		F8BFF293192820D600902F6F /* BBYDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF292192820D600902F6F /* BBYDevicesViewController.m */; };
+		F8BFF2961928216400902F6F /* BBYIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF2951928216400902F6F /* BBYIntroViewController.m */; };
+		F8BFF29B192821C200902F6F /* BBYBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF298192821C200902F6F /* BBYBaseCollectionViewController.m */; };
+		F8BFF29C192821C200902F6F /* BBYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF29A192821C200902F6F /* BBYBaseViewController.m */; };
+		F8BFF29F1928243000902F6F /* BBYDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF29E1928243000902F6F /* BBYDeviceCell.m */; };
+		F8BFF2A21928295800902F6F /* BBYDrumstickPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF2A11928295800902F6F /* BBYDrumstickPosition.m */; };
+		F8BFF2A71928FE5A00902F6F /* ADRDrumForceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BFF2A61928FE5A00902F6F /* ADRDrumForceView.m */; };
+		F8BFF2AF192900B200902F6F /* bass.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF2A9192900B200902F6F /* bass.wav */; };
+		F8BFF2B0192900B200902F6F /* bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF2AA192900B200902F6F /* bell.wav */; };
+		F8BFF2B1192900B200902F6F /* crash.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF2AB192900B200902F6F /* crash.wav */; };
+		F8BFF2B2192900B200902F6F /* hihat_closed.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF2AC192900B200902F6F /* hihat_closed.wav */; };
+		F8BFF2B3192900B200902F6F /* hihat_open.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF2AD192900B200902F6F /* hihat_open.wav */; };
+		F8BFF2B4192900B200902F6F /* snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = F8BFF2AE192900B200902F6F /* snare.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8BFF1D81927DECC00902F6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8BFF1A01927DECC00902F6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8BFF1A71927DECC00902F6F;
+			remoteInfo = AirDrums;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6483CAA27E4E4114BFABB243 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		903C3C5288254F5D941C9CFA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62D264A19282EE100B1051B /* ADRDebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADRDebugViewController.h; path = AirDrums/ADRDebugViewController.h; sourceTree = "<group>"; };
+		C62D264B19282EE100B1051B /* ADRDebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADRDebugViewController.m; path = AirDrums/ADRDebugViewController.m; sourceTree = "<group>"; };
+		C62D264D192831A600B1051B /* ADRStickDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADRStickDebug.h; path = AirDrums/ADRStickDebug.h; sourceTree = "<group>"; };
+		C62D264E192831A600B1051B /* ADRStickDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADRStickDebug.m; path = AirDrums/ADRStickDebug.m; sourceTree = "<group>"; };
+		F8BFF1A81927DECC00902F6F /* AirDrums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirDrums.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BFF1AB1927DECC00902F6F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F8BFF1AD1927DECC00902F6F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F8BFF1AF1927DECC00902F6F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F8BFF1B11927DECC00902F6F /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		F8BFF1B51927DECC00902F6F /* AirDrums-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirDrums-Info.plist"; sourceTree = "<group>"; };
+		F8BFF1B71927DECC00902F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F8BFF1B91927DECC00902F6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8BFF1BB1927DECC00902F6F /* AirDrums-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirDrums-Prefix.pch"; sourceTree = "<group>"; };
+		F8BFF1BC1927DECC00902F6F /* ADRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADRAppDelegate.h; sourceTree = "<group>"; };
+		F8BFF1BD1927DECC00902F6F /* ADRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADRAppDelegate.m; sourceTree = "<group>"; };
+		F8BFF1C01927DECC00902F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		F8BFF1C31927DECC00902F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		F8BFF1C51927DECC00902F6F /* ADRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADRViewController.h; sourceTree = "<group>"; };
+		F8BFF1C61927DECC00902F6F /* ADRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADRViewController.m; sourceTree = "<group>"; };
+		F8BFF1C81927DECC00902F6F /* ADRMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADRMyScene.h; sourceTree = "<group>"; };
+		F8BFF1C91927DECC00902F6F /* ADRMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADRMyScene.m; sourceTree = "<group>"; };
+		F8BFF1CB1927DECC00902F6F /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		F8BFF1CD1927DECC00902F6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F8BFF1D31927DECC00902F6F /* AirDrumsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirDrumsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8BFF1D41927DECC00902F6F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F8BFF1DC1927DECC00902F6F /* AirDrumsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirDrumsTests-Info.plist"; sourceTree = "<group>"; };
+		F8BFF1DE1927DECC00902F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F8BFF1E01927DECC00902F6F /* AirDrumsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirDrumsTests.m; sourceTree = "<group>"; };
+		F8BFF1EA1927E2F500902F6F /* Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
+		F8BFF1ED1927E6B200902F6F /* DEASensorTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DEASensorTag.h; path = Vendors/DEASensorTag/DEASensorTag.h; sourceTree = SOURCE_ROOT; };
+		F8BFF1EE1927E6B200902F6F /* DEASensorTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DEASensorTag.m; path = Vendors/DEASensorTag/DEASensorTag.m; sourceTree = SOURCE_ROOT; };
+		F8BFF1F01927E6B200902F6F /* DEAAccelerometerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEAAccelerometerService.h; sourceTree = "<group>"; };
+		F8BFF1F11927E6B200902F6F /* DEAAccelerometerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEAAccelerometerService.m; sourceTree = "<group>"; };
+		F8BFF1F21927E6B200902F6F /* DEABarometerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEABarometerService.h; sourceTree = "<group>"; };
+		F8BFF1F31927E6B200902F6F /* DEABarometerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEABarometerService.m; sourceTree = "<group>"; };
+		F8BFF1F41927E6B200902F6F /* DEABaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEABaseService.h; sourceTree = "<group>"; };
+		F8BFF1F51927E6B200902F6F /* DEABaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEABaseService.m; sourceTree = "<group>"; };
+		F8BFF1F61927E6B200902F6F /* DEADeviceInfoService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEADeviceInfoService.h; sourceTree = "<group>"; };
+		F8BFF1F71927E6B200902F6F /* DEADeviceInfoService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEADeviceInfoService.m; sourceTree = "<group>"; };
+		F8BFF1F81927E6B200902F6F /* DEAGyroscopeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEAGyroscopeService.h; sourceTree = "<group>"; };
+		F8BFF1F91927E6B200902F6F /* DEAGyroscopeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEAGyroscopeService.m; sourceTree = "<group>"; };
+		F8BFF1FA1927E6B200902F6F /* DEAHumidityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEAHumidityService.h; sourceTree = "<group>"; };
+		F8BFF1FB1927E6B200902F6F /* DEAHumidityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEAHumidityService.m; sourceTree = "<group>"; };
+		F8BFF1FC1927E6B200902F6F /* DEAMagnetometerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEAMagnetometerService.h; sourceTree = "<group>"; };
+		F8BFF1FD1927E6B200902F6F /* DEAMagnetometerService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEAMagnetometerService.m; sourceTree = "<group>"; };
+		F8BFF1FE1927E6B200902F6F /* DEASimpleKeysService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEASimpleKeysService.h; sourceTree = "<group>"; };
+		F8BFF1FF1927E6B200902F6F /* DEASimpleKeysService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEASimpleKeysService.m; sourceTree = "<group>"; };
+		F8BFF2001927E6B200902F6F /* DEATemperatureService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEATemperatureService.h; sourceTree = "<group>"; };
+		F8BFF2011927E6B200902F6F /* DEATemperatureService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEATemperatureService.m; sourceTree = "<group>"; };
+		F8BFF2021927E6B200902F6F /* TISensorTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TISensorTag.h; path = Vendors/DEASensorTag/TISensorTag.h; sourceTree = SOURCE_ROOT; };
+		F8BFF28219281B8500902F6F /* BBYAccelerometerFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYAccelerometerFilter.h; path = AirDrums/BBYAccelerometerFilter.h; sourceTree = "<group>"; };
+		F8BFF28319281B8500902F6F /* BBYAccelerometerFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYAccelerometerFilter.m; path = AirDrums/BBYAccelerometerFilter.m; sourceTree = "<group>"; };
+		F8BFF28419281B8500902F6F /* BBYCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYCentralManager.h; path = AirDrums/BBYCentralManager.h; sourceTree = "<group>"; };
+		F8BFF28519281B8500902F6F /* BBYCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYCentralManager.m; path = AirDrums/BBYCentralManager.m; sourceTree = "<group>"; };
+		F8BFF28619281B8500902F6F /* BBYDrumkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYDrumkit.h; path = AirDrums/BBYDrumkit.h; sourceTree = "<group>"; };
+		F8BFF28719281B8500902F6F /* BBYDrumkit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYDrumkit.m; path = AirDrums/BBYDrumkit.m; sourceTree = "<group>"; };
+		F8BFF28819281B8500902F6F /* BBYDrumkitSounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYDrumkitSounds.h; path = AirDrums/BBYDrumkitSounds.h; sourceTree = "<group>"; };
+		F8BFF28919281B8500902F6F /* BBYDrumkitSounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYDrumkitSounds.m; path = AirDrums/BBYDrumkitSounds.m; sourceTree = "<group>"; };
+		F8BFF28A19281B8500902F6F /* BBYPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYPeripheral.h; path = AirDrums/BBYPeripheral.h; sourceTree = "<group>"; };
+		F8BFF28B19281B8500902F6F /* BBYPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYPeripheral.m; path = AirDrums/BBYPeripheral.m; sourceTree = "<group>"; };
+		F8BFF291192820D600902F6F /* BBYDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYDevicesViewController.h; path = AirDrums/BBYDevicesViewController.h; sourceTree = "<group>"; };
+		F8BFF292192820D600902F6F /* BBYDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYDevicesViewController.m; path = AirDrums/BBYDevicesViewController.m; sourceTree = "<group>"; };
+		F8BFF2941928216400902F6F /* BBYIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYIntroViewController.h; path = AirDrums/BBYIntroViewController.h; sourceTree = "<group>"; };
+		F8BFF2951928216400902F6F /* BBYIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYIntroViewController.m; path = AirDrums/BBYIntroViewController.m; sourceTree = "<group>"; };
+		F8BFF297192821C200902F6F /* BBYBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYBaseCollectionViewController.h; path = AirDrums/BBYBaseCollectionViewController.h; sourceTree = "<group>"; };
+		F8BFF298192821C200902F6F /* BBYBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYBaseCollectionViewController.m; path = AirDrums/BBYBaseCollectionViewController.m; sourceTree = "<group>"; };
+		F8BFF299192821C200902F6F /* BBYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYBaseViewController.h; path = AirDrums/BBYBaseViewController.h; sourceTree = "<group>"; };
+		F8BFF29A192821C200902F6F /* BBYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYBaseViewController.m; path = AirDrums/BBYBaseViewController.m; sourceTree = "<group>"; };
+		F8BFF29D1928243000902F6F /* BBYDeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYDeviceCell.h; path = AirDrums/BBYDeviceCell.h; sourceTree = "<group>"; };
+		F8BFF29E1928243000902F6F /* BBYDeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYDeviceCell.m; path = AirDrums/BBYDeviceCell.m; sourceTree = "<group>"; };
+		F8BFF2A01928295800902F6F /* BBYDrumstickPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBYDrumstickPosition.h; path = AirDrums/BBYDrumstickPosition.h; sourceTree = "<group>"; };
+		F8BFF2A11928295800902F6F /* BBYDrumstickPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBYDrumstickPosition.m; path = AirDrums/BBYDrumstickPosition.m; sourceTree = "<group>"; };
+		F8BFF2A51928FE5A00902F6F /* ADRDrumForceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADRDrumForceView.h; path = AirDrums/ADRDrumForceView.h; sourceTree = "<group>"; };
+		F8BFF2A61928FE5A00902F6F /* ADRDrumForceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADRDrumForceView.m; path = AirDrums/ADRDrumForceView.m; sourceTree = "<group>"; };
+		F8BFF2A9192900B200902F6F /* bass.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bass.wav; path = finaldrumsounds/bass.wav; sourceTree = "<group>"; };
+		F8BFF2AA192900B200902F6F /* bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bell.wav; path = finaldrumsounds/bell.wav; sourceTree = "<group>"; };
+		F8BFF2AB192900B200902F6F /* crash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = crash.wav; path = finaldrumsounds/crash.wav; sourceTree = "<group>"; };
+		F8BFF2AC192900B200902F6F /* hihat_closed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hihat_closed.wav; path = finaldrumsounds/hihat_closed.wav; sourceTree = "<group>"; };
+		F8BFF2AD192900B200902F6F /* hihat_open.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = hihat_open.wav; path = finaldrumsounds/hihat_open.wav; sourceTree = "<group>"; };
+		F8BFF2AE192900B200902F6F /* snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = snare.wav; path = finaldrumsounds/snare.wav; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8BFF1A51927DECC00902F6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BFF1AE1927DECC00902F6F /* CoreGraphics.framework in Frameworks */,
+				F8BFF1B01927DECC00902F6F /* UIKit.framework in Frameworks */,
+				F8BFF1B21927DECC00902F6F /* SpriteKit.framework in Frameworks */,
+				F8BFF1AC1927DECC00902F6F /* Foundation.framework in Frameworks */,
+				E6086B8EC04640E0B1990761 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BFF1D01927DECC00902F6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BFF1D51927DECC00902F6F /* XCTest.framework in Frameworks */,
+				F8BFF1D71927DECC00902F6F /* UIKit.framework in Frameworks */,
+				F8BFF1D61927DECC00902F6F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8BFF19F1927DECC00902F6F = {
+			isa = PBXGroup;
+			children = (
+				F8BFF2541928174900902F6F /* ViewControllers */,
+				F8BFF1EA1927E2F500902F6F /* Notes */,
+				F8BFF20D1927E8FB00902F6F /* Periperhal */,
+				F8BFF1B31927DECC00902F6F /* AirDrums */,
+				F8BFF2A8192900A100902F6F /* Sounds */,
+				F8BFF1EC1927E69D00902F6F /* Vendors */,
+				F8BFF1DA1927DECC00902F6F /* AirDrumsTests */,
+				F8BFF1AA1927DECC00902F6F /* Frameworks */,
+				F8BFF1A91927DECC00902F6F /* Products */,
+				6483CAA27E4E4114BFABB243 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		F8BFF1A91927DECC00902F6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF1A81927DECC00902F6F /* AirDrums.app */,
+				F8BFF1D31927DECC00902F6F /* AirDrumsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8BFF1AA1927DECC00902F6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF1AB1927DECC00902F6F /* Foundation.framework */,
+				F8BFF1AD1927DECC00902F6F /* CoreGraphics.framework */,
+				F8BFF1AF1927DECC00902F6F /* UIKit.framework */,
+				F8BFF1B11927DECC00902F6F /* SpriteKit.framework */,
+				F8BFF1D41927DECC00902F6F /* XCTest.framework */,
+				903C3C5288254F5D941C9CFA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8BFF1B31927DECC00902F6F /* AirDrums */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF1BC1927DECC00902F6F /* ADRAppDelegate.h */,
+				F8BFF1BD1927DECC00902F6F /* ADRAppDelegate.m */,
+				F8BFF1BF1927DECC00902F6F /* Main_iPhone.storyboard */,
+				F8BFF1C21927DECC00902F6F /* Main_iPad.storyboard */,
+				F8BFF1C51927DECC00902F6F /* ADRViewController.h */,
+				F8BFF1C61927DECC00902F6F /* ADRViewController.m */,
+				F8BFF1C81927DECC00902F6F /* ADRMyScene.h */,
+				F8BFF1C91927DECC00902F6F /* ADRMyScene.m */,
+				F8BFF1CB1927DECC00902F6F /* Spaceship.png */,
+				F8BFF1CD1927DECC00902F6F /* Images.xcassets */,
+				F8BFF1B41927DECC00902F6F /* Supporting Files */,
+			);
+			path = AirDrums;
+			sourceTree = "<group>";
+		};
+		F8BFF1B41927DECC00902F6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF1B51927DECC00902F6F /* AirDrums-Info.plist */,
+				F8BFF1B61927DECC00902F6F /* InfoPlist.strings */,
+				F8BFF1B91927DECC00902F6F /* main.m */,
+				F8BFF1BB1927DECC00902F6F /* AirDrums-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8BFF1DA1927DECC00902F6F /* AirDrumsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF1E01927DECC00902F6F /* AirDrumsTests.m */,
+				F8BFF1DB1927DECC00902F6F /* Supporting Files */,
+			);
+			path = AirDrumsTests;
+			sourceTree = "<group>";
+		};
+		F8BFF1DB1927DECC00902F6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF1DC1927DECC00902F6F /* AirDrumsTests-Info.plist */,
+				F8BFF1DD1927DECC00902F6F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8BFF1EC1927E69D00902F6F /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF1ED1927E6B200902F6F /* DEASensorTag.h */,
+				F8BFF1EE1927E6B200902F6F /* DEASensorTag.m */,
+				F8BFF1EF1927E6B200902F6F /* Services */,
+				F8BFF2021927E6B200902F6F /* TISensorTag.h */,
+			);
+			name = Vendors;
+			path = AirDrumsTests;
+			sourceTree = "<group>";
+		};
+		F8BFF1EF1927E6B200902F6F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF1F01927E6B200902F6F /* DEAAccelerometerService.h */,
+				F8BFF1F11927E6B200902F6F /* DEAAccelerometerService.m */,
+				F8BFF1F21927E6B200902F6F /* DEABarometerService.h */,
+				F8BFF1F31927E6B200902F6F /* DEABarometerService.m */,
+				F8BFF1F41927E6B200902F6F /* DEABaseService.h */,
+				F8BFF1F51927E6B200902F6F /* DEABaseService.m */,
+				F8BFF1F61927E6B200902F6F /* DEADeviceInfoService.h */,
+				F8BFF1F71927E6B200902F6F /* DEADeviceInfoService.m */,
+				F8BFF1F81927E6B200902F6F /* DEAGyroscopeService.h */,
+				F8BFF1F91927E6B200902F6F /* DEAGyroscopeService.m */,
+				F8BFF1FA1927E6B200902F6F /* DEAHumidityService.h */,
+				F8BFF1FB1927E6B200902F6F /* DEAHumidityService.m */,
+				F8BFF1FC1927E6B200902F6F /* DEAMagnetometerService.h */,
+				F8BFF1FD1927E6B200902F6F /* DEAMagnetometerService.m */,
+				F8BFF1FE1927E6B200902F6F /* DEASimpleKeysService.h */,
+				F8BFF1FF1927E6B200902F6F /* DEASimpleKeysService.m */,
+				F8BFF2001927E6B200902F6F /* DEATemperatureService.h */,
+				F8BFF2011927E6B200902F6F /* DEATemperatureService.m */,
+			);
+			name = Services;
+			path = Vendors/DEASensorTag/Services;
+			sourceTree = SOURCE_ROOT;
+		};
+		F8BFF20D1927E8FB00902F6F /* Periperhal */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF28219281B8500902F6F /* BBYAccelerometerFilter.h */,
+				F8BFF28319281B8500902F6F /* BBYAccelerometerFilter.m */,
+				F8BFF28419281B8500902F6F /* BBYCentralManager.h */,
+				F8BFF28519281B8500902F6F /* BBYCentralManager.m */,
+				F8BFF28619281B8500902F6F /* BBYDrumkit.h */,
+				F8BFF28719281B8500902F6F /* BBYDrumkit.m */,
+				F8BFF28819281B8500902F6F /* BBYDrumkitSounds.h */,
+				F8BFF28919281B8500902F6F /* BBYDrumkitSounds.m */,
+				F8BFF28A19281B8500902F6F /* BBYPeripheral.h */,
+				F8BFF28B19281B8500902F6F /* BBYPeripheral.m */,
+				F8BFF2A01928295800902F6F /* BBYDrumstickPosition.h */,
+				F8BFF2A11928295800902F6F /* BBYDrumstickPosition.m */,
+			);
+			name = Periperhal;
+			sourceTree = "<group>";
+		};
+		F8BFF2541928174900902F6F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF291192820D600902F6F /* BBYDevicesViewController.h */,
+				F8BFF292192820D600902F6F /* BBYDevicesViewController.m */,
+				F8BFF2941928216400902F6F /* BBYIntroViewController.h */,
+				F8BFF2951928216400902F6F /* BBYIntroViewController.m */,
+				F8BFF297192821C200902F6F /* BBYBaseCollectionViewController.h */,
+				F8BFF298192821C200902F6F /* BBYBaseCollectionViewController.m */,
+				F8BFF299192821C200902F6F /* BBYBaseViewController.h */,
+				F8BFF29A192821C200902F6F /* BBYBaseViewController.m */,
+				F8BFF29D1928243000902F6F /* BBYDeviceCell.h */,
+				F8BFF29E1928243000902F6F /* BBYDeviceCell.m */,
+				C62D264A19282EE100B1051B /* ADRDebugViewController.h */,
+				C62D264B19282EE100B1051B /* ADRDebugViewController.m */,
+				C62D264D192831A600B1051B /* ADRStickDebug.h */,
+				C62D264E192831A600B1051B /* ADRStickDebug.m */,
+				F8BFF2A51928FE5A00902F6F /* ADRDrumForceView.h */,
+				F8BFF2A61928FE5A00902F6F /* ADRDrumForceView.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F8BFF2A8192900A100902F6F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F8BFF2A9192900B200902F6F /* bass.wav */,
+				F8BFF2AA192900B200902F6F /* bell.wav */,
+				F8BFF2AB192900B200902F6F /* crash.wav */,
+				F8BFF2AC192900B200902F6F /* hihat_closed.wav */,
+				F8BFF2AD192900B200902F6F /* hihat_open.wav */,
+				F8BFF2AE192900B200902F6F /* snare.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8BFF1A71927DECC00902F6F /* AirDrums */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8BFF1E41927DECC00902F6F /* Build configuration list for PBXNativeTarget "AirDrums" */;
+			buildPhases = (
+				86636D48C87342248E11EFF1 /* Check Pods Manifest.lock */,
+				F8BFF1A41927DECC00902F6F /* Sources */,
+				F8BFF1A51927DECC00902F6F /* Frameworks */,
+				F8BFF1A61927DECC00902F6F /* Resources */,
+				426277B342234FACA0AED460 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirDrums;
+			productName = AirDrums;
+			productReference = F8BFF1A81927DECC00902F6F /* AirDrums.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8BFF1D21927DECC00902F6F /* AirDrumsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8BFF1E71927DECC00902F6F /* Build configuration list for PBXNativeTarget "AirDrumsTests" */;
+			buildPhases = (
+				F8BFF1CF1927DECC00902F6F /* Sources */,
+				F8BFF1D01927DECC00902F6F /* Frameworks */,
+				F8BFF1D11927DECC00902F6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8BFF1D91927DECC00902F6F /* PBXTargetDependency */,
+			);
+			name = AirDrumsTests;
+			productName = AirDrumsTests;
+			productReference = F8BFF1D31927DECC00902F6F /* AirDrumsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8BFF1A01927DECC00902F6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ADR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ronald Mannak";
+				TargetAttributes = {
+					F8BFF1D21927DECC00902F6F = {
+						TestTargetID = F8BFF1A71927DECC00902F6F;
+					};
+				};
+			};
+			buildConfigurationList = F8BFF1A31927DECC00902F6F /* Build configuration list for PBXProject "AirDrums" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8BFF19F1927DECC00902F6F;
+			productRefGroup = F8BFF1A91927DECC00902F6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8BFF1A71927DECC00902F6F /* AirDrums */,
+				F8BFF1D21927DECC00902F6F /* AirDrumsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8BFF1A61927DECC00902F6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BFF2B1192900B200902F6F /* crash.wav in Resources */,
+				F8BFF1EB1927E2F500902F6F /* Notes in Resources */,
+				F8BFF2AF192900B200902F6F /* bass.wav in Resources */,
+				F8BFF2B2192900B200902F6F /* hihat_closed.wav in Resources */,
+				F8BFF2B3192900B200902F6F /* hihat_open.wav in Resources */,
+				F8BFF1CC1927DECC00902F6F /* Spaceship.png in Resources */,
+				F8BFF2B0192900B200902F6F /* bell.wav in Resources */,
+				F8BFF1CE1927DECC00902F6F /* Images.xcassets in Resources */,
+				F8BFF1C41927DECC00902F6F /* Main_iPad.storyboard in Resources */,
+				F8BFF1C11927DECC00902F6F /* Main_iPhone.storyboard in Resources */,
+				F8BFF2B4192900B200902F6F /* snare.wav in Resources */,
+				F8BFF1B81927DECC00902F6F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BFF1D11927DECC00902F6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BFF1DF1927DECC00902F6F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		426277B342234FACA0AED460 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86636D48C87342248E11EFF1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8BFF1A41927DECC00902F6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62D264F192831A600B1051B /* ADRStickDebug.m in Sources */,
+				F8BFF28C19281B8500902F6F /* BBYAccelerometerFilter.m in Sources */,
+				F8BFF2041927E6B200902F6F /* DEAAccelerometerService.m in Sources */,
+				F8BFF20B1927E6B200902F6F /* DEASimpleKeysService.m in Sources */,
+				F8BFF2061927E6B200902F6F /* DEABaseService.m in Sources */,
+				F8BFF20A1927E6B200902F6F /* DEAMagnetometerService.m in Sources */,
+				F8BFF1BE1927DECC00902F6F /* ADRAppDelegate.m in Sources */,
+				F8BFF1BA1927DECC00902F6F /* main.m in Sources */,
+				F8BFF2091927E6B200902F6F /* DEAHumidityService.m in Sources */,
+				F8BFF2961928216400902F6F /* BBYIntroViewController.m in Sources */,
+				F8BFF1CA1927DECC00902F6F /* ADRMyScene.m in Sources */,
+				F8BFF2031927E6B200902F6F /* DEASensorTag.m in Sources */,
+				F8BFF29B192821C200902F6F /* BBYBaseCollectionViewController.m in Sources */,
+				F8BFF29019281B8500902F6F /* BBYPeripheral.m in Sources */,
+				F8BFF20C1927E6B200902F6F /* DEATemperatureService.m in Sources */,
+				F8BFF2A21928295800902F6F /* BBYDrumstickPosition.m in Sources */,
+				F8BFF1C71927DECC00902F6F /* ADRViewController.m in Sources */,
+				F8BFF29F1928243000902F6F /* BBYDeviceCell.m in Sources */,
+				F8BFF28F19281B8500902F6F /* BBYDrumkitSounds.m in Sources */,
+				F8BFF28E19281B8500902F6F /* BBYDrumkit.m in Sources */,
+				F8BFF2071927E6B200902F6F /* DEADeviceInfoService.m in Sources */,
+				F8BFF29C192821C200902F6F /* BBYBaseViewController.m in Sources */,
+				F8BFF293192820D600902F6F /* BBYDevicesViewController.m in Sources */,
+				F8BFF2081927E6B200902F6F /* DEAGyroscopeService.m in Sources */,
+				F8BFF2051927E6B200902F6F /* DEABarometerService.m in Sources */,
+				C62D264C19282EE100B1051B /* ADRDebugViewController.m in Sources */,
+				F8BFF2A71928FE5A00902F6F /* ADRDrumForceView.m in Sources */,
+				F8BFF28D19281B8500902F6F /* BBYCentralManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8BFF1CF1927DECC00902F6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8BFF1E11927DECC00902F6F /* AirDrumsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8BFF1D91927DECC00902F6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8BFF1A71927DECC00902F6F /* AirDrums */;
+			targetProxy = F8BFF1D81927DECC00902F6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8BFF1B61927DECC00902F6F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8BFF1B71927DECC00902F6F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F8BFF1BF1927DECC00902F6F /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8BFF1C01927DECC00902F6F /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		F8BFF1C21927DECC00902F6F /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8BFF1C31927DECC00902F6F /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		F8BFF1DD1927DECC00902F6F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8BFF1DE1927DECC00902F6F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8BFF1E21927DECC00902F6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8BFF1E31927DECC00902F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8BFF1E51927DECC00902F6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6483CAA27E4E4114BFABB243 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDrums/AirDrums-Prefix.pch";
+				INFOPLIST_FILE = "AirDrums/AirDrums-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F8BFF1E61927DECC00902F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6483CAA27E4E4114BFABB243 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDrums/AirDrums-Prefix.pch";
+				INFOPLIST_FILE = "AirDrums/AirDrums-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F8BFF1E81927DECC00902F6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AirDrums.app/AirDrums";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDrums/AirDrums-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AirDrumsTests/AirDrumsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F8BFF1E91927DECC00902F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AirDrums.app/AirDrums";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirDrums/AirDrums-Prefix.pch";
+				INFOPLIST_FILE = "AirDrumsTests/AirDrumsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8BFF1A31927DECC00902F6F /* Build configuration list for PBXProject "AirDrums" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8BFF1E21927DECC00902F6F /* Debug */,
+				F8BFF1E31927DECC00902F6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8BFF1E41927DECC00902F6F /* Build configuration list for PBXNativeTarget "AirDrums" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8BFF1E51927DECC00902F6F /* Debug */,
+				F8BFF1E61927DECC00902F6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8BFF1E71927DECC00902F6F /* Build configuration list for PBXNativeTarget "AirDrumsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8BFF1E81927DECC00902F6F /* Debug */,
+				F8BFF1E91927DECC00902F6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8BFF1A01927DECC00902F6F /* Project object */;
+}

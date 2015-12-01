@@ -1,0 +1,10 @@
+PODS:
+  - YmsCoreBluetooth (1.09.1)
+
+DEPENDENCIES:
+  - YmsCoreBluetooth
+
+SPEC CHECKSUMS:
+  YmsCoreBluetooth: 20cc59e8e3bf5cc9e58899632dfc4f5b29df80aa
+
+COCOAPODS: 0.32.1

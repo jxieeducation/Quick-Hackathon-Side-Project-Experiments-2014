@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-YmsCoreBluetooth.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2FA88D3F1BA341BC834676CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>512F3141A81743FC9DCE8F42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7706BB58FE9247A29F73FD3D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BA90DEDD77D5409A8C6F3BCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
